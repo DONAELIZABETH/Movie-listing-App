@@ -16,7 +16,7 @@ const MovieDetailsPage = () => {
     }
 
     try {
-      const response = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=13020bd9`);
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.omdbapi.com/?i=${id}&apikey=13020bd9`);
       const data = await response.json();
       
       if (data.Response === 'True') {

@@ -23,7 +23,7 @@ const HomePage = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch(`http://www.omdbapi.com/?s=${searchTerm}&page=${page}&apikey=13020bd9`);
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?s=${searchTerm}&page=${page}&apikey=13020bd9`);
       const data = await response.json();
 
       if (data.Response === 'True') {
